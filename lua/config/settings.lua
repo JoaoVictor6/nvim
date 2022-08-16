@@ -17,6 +17,7 @@ vim.cmd [[
   set number
   set encoding=utf8
   set title
+  set relativenumber
   set confirm
   set incsearch
   set autoindent
@@ -25,6 +26,8 @@ vim.cmd [[
   set t_Co=256
   set softtabstop=2
   set mouse=a
+  set background=dark
+  color aquarium
   syntax on
   set cursorline
 ]]

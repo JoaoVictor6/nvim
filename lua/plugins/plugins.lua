@@ -14,4 +14,6 @@ return require('packer').startup(function()
   use 'norcalli/nvim-colorizer.lua'
   use 'tpope/vim-surround'
   use 'windwp/nvim-autopairs'
+  use 'arcticicestudio/nord-vim'
+  use 'frenzyexists/aquarium-vim'
 end)
