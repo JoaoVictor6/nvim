@@ -21,7 +21,9 @@ require('telescope').setup({
     "%.pdf", 
     "%.mkv", 
     "%.mp4", 
-    "%.zip"
+    "%.zip",
+    "%-lock.json",
+    "yarn.lock"
   },
 })
 
