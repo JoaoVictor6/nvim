@@ -1,4 +1,9 @@
 require('nvim-web-devicons').get_icons()
+local nvim_tree = require("nvim-tree")
+local tree_cb = require"nvim-tree.config".nvim_tree_callback
+
+nvim_tree.setup()
+
 require('staline').setup()
 require('colorizer').setup()
 require('telescope').setup({ 

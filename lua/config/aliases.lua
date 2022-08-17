@@ -21,3 +21,6 @@ keymap.set('n', 'te', ':tabedit<CR>')
 keymap.set('n', ';f', ':Telescope find_files<CR>')
 keymap.set('n', ';w', ':Telescope grep_string<CR>')
 keymap.set('n', ';;', ':Telescope live_grep<CR>')
+
+-- nvim-tree
+keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>')
