@@ -1,6 +1,24 @@
 require('nvim-web-devicons').get_icons()
 require('staline').setup()
 require('colorizer').setup()
+require('telescope').setup({ 
+  file_ignore_patterns = { 
+    "./node_modules/*", 
+    "node_modules", 
+    "^node_modules/*", 
+    "node_modules/*", 
+    ".git/", 
+    ".cache", 
+    "%.o", 
+    "%.a", 
+    "%.out", 
+    "%.class",
+    "%.pdf", 
+    "%.mkv", 
+    "%.mp4", 
+    "%.zip"
+  },
+})
 
 --auto pair
 require('nvim-autopairs').setup({
