@@ -34,4 +34,5 @@ return require('packer').startup(function()
   use 'ray-x/lsp_signature.nvim'
   use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
   use 'onsails/lspkind-nvim'
+  use 'neoclide/coc.nvim'
 end)
