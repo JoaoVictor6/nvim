@@ -45,6 +45,7 @@ return require('packer').startup(function()
   -- tree sitter
   use 'nvim-treesitter/nvim-treesitter'
 
-  -- git signs
-  use "lewis6991/gitsigns.nvim"
+  -- git
+  use 'lewis6991/gitsigns.nvim'
+  use 'dinhhuy258/git.nvim' -- blame
 end)
