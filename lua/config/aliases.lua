@@ -24,3 +24,14 @@ keymap.set('n', ';;', ':Telescope live_grep<CR>')
 
 -- nvim-tree
 keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>')
+
+-- move lines with nvim-move
+keymap.set('n', '<A-j>', ':MoveLine(1)<CR>', { noremap = true, silent = true })
+keymap.set('n', '<A-k>', ':MoveLine(-1)<CR>', { noremap = true, silent = true })
+keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', { noremap = true, silent = true })
+keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', { noremap = true, silent = true })
+
+-- adicionar aalhos para mover na horizontal caso note que seja necessário
+
+-- limpar patern da ultima pesquisa
+keymap.set('n', '<A-f>', ':let @/ = ""<CR>', {silent = true, noremap = true})

@@ -1,5 +1,5 @@
-vim.cmd [[packadd packer.nvim]]
 
+vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'terroo/vim-simple-emoji'
@@ -34,5 +34,6 @@ return require('packer').startup(function()
   use 'ray-x/lsp_signature.nvim'
   use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
   use 'onsails/lspkind-nvim'
-  use 'neoclide/coc.nvim'
+  use 'terrortylor/nvim-comment'
+  use 'fedepujol/move.nvim'
 end)

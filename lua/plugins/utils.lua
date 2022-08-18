@@ -32,6 +32,9 @@ require('nvim-autopairs').setup({
   enable_check_bracket_line = false
 })
 
+--comentarios
+require('nvim_comment').setup()
+
 -- PARA AS LINHAS DE INDENTAÇÃO
 vim.opt.listchars:append("space:⋅")
 --vim.opt.listchars:append("eol:↴")

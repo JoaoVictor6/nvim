@@ -9,6 +9,7 @@ end
 require'lspconfig'.clangd.setup{}
 require "lsp_signature".setup()
 require'lspconfig'.tsserver.setup {}
+
 vim.o.completeopt = 'menuone,noselect'
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
