@@ -76,3 +76,13 @@ require("indent_blankline").setup {
         "IndentBlanklineIndent6",
     },
 }
+
+
+vim.cmd(
+  [[
+    let g:neoformat_try_node_exe = 1
+    autocmd BufWritePre *.js Neoformat
+    autocmd BufWritePre *.ts Neoformat
+    autocmd BufWritePre *.tsx Neoformat
+  ]]
+)

@@ -23,11 +23,13 @@ return require('packer').startup(function()
     }
   }
   use 'neovim/nvim-lspconfig'
+
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
+  
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
@@ -39,6 +41,10 @@ return require('packer').startup(function()
 
   -- colors
   use 'ghifarit53/tokyonight-vim'
-
+  
+  -- tree sitter
   use 'nvim-treesitter/nvim-treesitter'
+
+  -- git signs
+  use "lewis6991/gitsigns.nvim"
 end)
