@@ -36,4 +36,7 @@ return require('packer').startup(function()
   use 'onsails/lspkind-nvim'
   use 'terrortylor/nvim-comment'
   use 'fedepujol/move.nvim'
+
+  -- colors
+  use 'ghifarit53/tokyonight-vim'
 end)
