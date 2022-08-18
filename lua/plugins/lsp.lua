@@ -17,6 +17,8 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local cmp = require'cmp'
 local luasnip = require("luasnip")
+luasnip.filetype_extend("javascript", { "javascriptreact" })
+luasnip.filetype_extend("javascript", { "html" })
 
 local lspkind = require('lspkind')
 local source_mapping = {
@@ -79,6 +81,15 @@ cmp.setup({
         vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true), '')
       else
         fallback()
+      end
+    end,
+    ['<S-Tab>'] = function(core, fallback)
+      if vim.fn.pumvisible() == 1 then
+	vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true, true, true), 'n')
+      elseif luasnip.jumpable(-1) then
+	vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-jump-prev', true, true, true), '')
+      else
+	fallback()
       end
     end,
     ['<S-Tab>'] = function(fallback)
