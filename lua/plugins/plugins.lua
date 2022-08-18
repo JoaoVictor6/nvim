@@ -39,4 +39,6 @@ return require('packer').startup(function()
 
   -- colors
   use 'ghifarit53/tokyonight-vim'
+
+  use 'nvim-treesitter/nvim-treesitter'
 end)

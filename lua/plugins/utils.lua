@@ -35,6 +35,15 @@ require('nvim-autopairs').setup({
 --comentarios
 require('nvim_comment').setup()
 
+-- tree sitter
+require'nvim-treesitter.configs'.setup({
+  ensure_installed = {'javascript', 'typescript', 'tsx', 'html', 'css', 'lua'},
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = true,
+  }
+})
+
 -- PARA AS LINHAS DE INDENTAÇÃO
 vim.opt.listchars:append("space:⋅")
 --vim.opt.listchars:append("eol:↴")
