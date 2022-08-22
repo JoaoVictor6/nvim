@@ -8,6 +8,7 @@ end
 
 require'lspconfig'.clangd.setup{}
 require "lsp_signature".setup()
+require'lspconfig'.eslint.setup{}
 
 local nvim_lsp = require("lspconfig")
 nvim_lsp.tsserver.setup({})

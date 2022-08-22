@@ -23,6 +23,7 @@ return require('packer').startup(function()
     }
   }
   use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
 
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -48,4 +49,7 @@ return require('packer').startup(function()
   -- git
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- blame
+
+  -- neoformat
+  use 'sbdchd/neoformat'
 end)

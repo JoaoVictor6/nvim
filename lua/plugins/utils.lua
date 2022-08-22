@@ -77,12 +77,22 @@ require("indent_blankline").setup {
     },
 }
 
-
 vim.cmd(
   [[
     let g:neoformat_try_node_exe = 1
-    autocmd BufWritePre *.js Neoformat
-    autocmd BufWritePre *.ts Neoformat
-    autocmd BufWritePre *.tsx Neoformat
+    let g:neoformat_enabled_javascript = ['prettier', 'eslint_d', 'prettier-eslint']
+    let g:neoformat_enabled_typescript = ['tslint']
   ]]
 )
+
+
+--https://www.reddit.com/r/neovim/comments/vraejn/comment/ievfele/?utm_source=share&utm_medium=web2x&context=3
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  callback = function()
+    vim.cmd("EslintFixAll")
+    vim.cmd("Neoformat prettier")
+  end,
+  group = autogroup_eslint_lsp,
+})
+
